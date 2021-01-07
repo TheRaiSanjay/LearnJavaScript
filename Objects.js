@@ -42,3 +42,18 @@ var Animal = {
 var Horse = Object.create(Animal);
 Horse.type = "Something Else";
 Horse.displayType();
+//How to list all properties of Object
+var Employee = { name: "Sanjay Rai", age: 29, companiesServed: ["Wipro", "Oracle", "Capgemini"], address: "Chhapra" };
+var properties = ""; // to store all properties name without value
+for (e in Employee) {
+    properties += e + " : ";
+}
+console.log("Initially Before Deletion : " + properties);//it will list down all the properties of Employee Object
+//Let's delete two properties now
+delete Employee.address;
+delete Employee.companiesServed;
+var properties = ""; // clearing and making empty
+for (e in Employee) {
+    properties += e + " : ";
+}
+console.log(" After Deletion : " + properties);
